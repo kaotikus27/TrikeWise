@@ -12,6 +12,6 @@ public class Post {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private SocialUser sociallUser;
+    private SocialUser socialUser;
 
 }
