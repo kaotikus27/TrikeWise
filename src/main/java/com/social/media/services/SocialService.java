@@ -23,4 +23,16 @@ public class SocialService {
     }
 
 
+    public SocialUser deleteUser(Long id) {
+
+        SocialUser socialUser = socialUserRepository.
+                findById(id).orElseThrow(()->
+                        new RuntimeException("Social User Not Found"));
+
+        socialUserRepository.delete(socialUser);
+        return socialUser;
+    }
+
+
+
 }
